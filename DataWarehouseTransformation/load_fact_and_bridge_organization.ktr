@@ -665,7 +665,7 @@
     <hop>
       <from>Select values for fact</from>
       <to>Unique rows</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Unique rows</from>
@@ -702,6 +702,26 @@
       <to>Select values for fact</to>
       <enabled>N</enabled>
     </hop>
+    <hop>
+      <from>Select values for fact</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Unique rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Set field value</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Set field value</from>
+      <to>Unique rows</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>Block this step until steps bridge is finish</name>
@@ -729,7 +749,7 @@
     </remotesteps>
     <GUI>
       <xloc>1312</xloc>
-      <yloc>384</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -801,7 +821,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>752</xloc>
-      <yloc>384</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -899,7 +919,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>96</xloc>
-      <yloc>512</yloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -997,7 +1017,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>320</xloc>
-      <yloc>512</yloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1054,7 +1074,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>1248</xloc>
-      <yloc>512</yloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1203,7 +1223,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>1408</xloc>
-      <yloc>512</yloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1236,7 +1256,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>496</xloc>
-      <yloc>384</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1269,7 +1289,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>272</xloc>
-      <yloc>384</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1303,7 +1323,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>768</xloc>
-      <yloc>512</yloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1336,7 +1356,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>544</xloc>
-      <yloc>512</yloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1375,7 +1395,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>1024</xloc>
-      <yloc>512</yloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1614,7 +1634,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>96</xloc>
-      <yloc>384</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1729,7 +1749,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>1072</xloc>
-      <yloc>384</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1911,7 +1931,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>928</xloc>
-      <yloc>384</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1944,7 +1964,7 @@ GROUP BY project;</sql>
     </remotesteps>
     <GUI>
       <xloc>768</xloc>
-      <yloc>608</yloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2179,7 +2199,7 @@ FROM project
     </remotesteps>
     <GUI>
       <xloc>544</xloc>
-      <yloc>624</yloc>
+      <yloc>784</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2393,6 +2413,70 @@ FROM project</sql>
     <GUI>
       <xloc>576</xloc>
       <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Set field value</send_true_to>
+    <send_false_to>Unique rows</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>start_date</leftvalue>
+        <function>&gt;</function>
+        <rightvalue>end_date</rightvalue>
+      </condition>
+    </compare>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Set field value</name>
+    <type>SetValueField</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>end_date</name>
+        <replaceby>start_date</replaceby>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
