@@ -509,7 +509,7 @@
     <hop>
       <from>Unique rows</from>
       <to>Select values</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Select values</from>
@@ -707,7 +707,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>E:\Clouds\MEGA\Università-Magistrale\BusinessIntelligenceAnalytics\project\csv\cordisref-FP7programmes.csv</filename>
+    <filename>E:\Clouds\MEGA\University\DataWarehouse\csv\cordisref-FP7programmes.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -719,7 +719,7 @@
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
-    <encoding/>
+    <encoding>UTF-8</encoding>
     <fields>
       <field>
         <name>RCN</name>

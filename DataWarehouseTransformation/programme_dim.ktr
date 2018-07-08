@@ -663,12 +663,6 @@ WHERE last_update > ?</sql>
         <name2/>
       </key>
       <key>
-        <name>title</name>
-        <field>programme_name</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
         <name>last_update</name>
         <field>last_update</field>
         <condition>&lt;</condition>

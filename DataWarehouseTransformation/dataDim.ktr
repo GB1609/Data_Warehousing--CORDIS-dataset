@@ -708,32 +708,8 @@
       <schema/>
       <table>date</table>
       <key>
-        <name>day</name>
-        <field>day</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>month</name>
-        <field>month</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>year</name>
-        <field>year</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
         <name>dateID</name>
         <field>idDate</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>completeDate</name>
-        <field>completeDate</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -755,7 +731,7 @@
       <value>
         <name>idDate</name>
         <rename>dateID</rename>
-        <update>Y</update>
+        <update>N</update>
       </value>
       <value>
         <name>completeDate</name>
@@ -864,7 +840,6 @@
     <fields>
       <field>
         <name>date</name>
-        <rename/>
       </field>
       <field>
         <name>date</name>

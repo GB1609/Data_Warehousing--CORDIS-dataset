@@ -482,6 +482,11 @@
     </hop>
     <hop>
       <from>Unique rows</from>
+      <to>If field value is null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>If field value is null</from>
       <to>insert last_update</to>
       <enabled>Y</enabled>
     </hop>
@@ -686,7 +691,7 @@
     <name>Unique rows</name>
     <type>Unique</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -727,11 +732,11 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>E:\Clouds\MEGA\Università-Magistrale\BusinessIntelligenceAnalytics\project\csv\cordis-fp7projects.csv</filename>
+    <filename>E:\Clouds\MEGA\University\DataWarehouse\csv_bak\cordis-fp7projects.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
-    <separator>	</separator>
+    <separator>;</separator>
     <enclosure>"</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
@@ -739,7 +744,7 @@
     <add_filename_result>N</add_filename_result>
     <parallel>Y</parallel>
     <newline_possible>N</newline_possible>
-    <encoding/>
+    <encoding>UTF-8</encoding>
     <fields>
       <field>
         <name>rcn</name>
@@ -748,7 +753,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>1239</length>
+        <length>2589</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -759,7 +764,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>693</length>
+        <length>993</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -770,7 +775,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>35</length>
+        <length>702</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -781,7 +786,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>21</length>
+        <length>1414</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -792,7 +797,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>13</length>
+        <length>2021</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -803,7 +808,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>92</length>
+        <length>314</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -814,7 +819,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>10</length>
+        <length>370</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -825,29 +830,29 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>843</length>
+        <length>2955</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>startDate</name>
         <type>Date</type>
-        <format>dd/MM/yyyy</format>
+        <format>yyyy-MM-dd</format>
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>32</length>
+        <length>1272</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>endDate</name>
         <type>Date</type>
-        <format>dd/MM/yyyy</format>
+        <format>yyyy-MM-dd</format>
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>11</length>
+        <length>1190</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -858,7 +863,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>39</length>
+        <length>1076</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -869,30 +874,30 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>1998</length>
+        <length>2991</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>totalCost</name>
-        <type>Number</type>
+        <type>BigNumber</type>
         <format>#.#</format>
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>11</length>
-        <precision>2</precision>
+        <length>849</length>
+        <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>ecMaxContribution</name>
-        <type>Number</type>
+        <type>BigNumber</type>
         <format>#.#</format>
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>8</length>
-        <precision>1</precision>
+        <length>995</length>
+        <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
@@ -902,7 +907,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>20</length>
+        <length>87</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -913,7 +918,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>6</length>
+        <length>442</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -924,7 +929,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>64</length>
+        <length>238</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -935,7 +940,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>2</length>
+        <length>41</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -946,7 +951,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>886</length>
+        <length>2343</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -957,7 +962,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>26</length>
+        <length>86</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -968,7 +973,7 @@
         <currency>€</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>11</length>
+        <length>19</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1039,13 +1044,6 @@
             <function>IS NOT NULL</function>
             <rightvalue/>
           </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <leftvalue/>
-            <function>=</function>
-            <rightvalue/>
-          </condition>
         </conditions>
       </condition>
     </compare>
@@ -1059,6 +1057,63 @@
     <GUI>
       <xloc>416</xloc>
       <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>Y</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>ecMaxContribution</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>objective</name>
+        <value>not knowed</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>status</name>
+        <value>ONG</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>totalCost</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
