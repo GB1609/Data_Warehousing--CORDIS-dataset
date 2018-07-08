@@ -728,18 +728,6 @@ WHERE last_update>?</sql>
         <condition>=</condition>
         <name2/>
       </key>
-      <key>
-        <name>country</name>
-        <field>id_country</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>last_update</name>
-        <field>last_update</field>
-        <condition>&lt;</condition>
-        <name2/>
-      </key>
       <value>
         <name>id_organization</name>
         <rename>idOrganization</rename>

@@ -887,7 +887,7 @@
           <groupfilter function='level-members' level='[country_name]' />
         </groupfilter>
       </group>
-      <layout dim-ordering='alphabetic' dim-percentage='0.464286' measure-ordering='alphabetic' measure-percentage='0.535714' show-structure='true' user-set-layout='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.463687' measure-ordering='alphabetic' measure-percentage='0.536313' show-structure='true' user-set-layout='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[none:country_name:nk]' type='palette'>
